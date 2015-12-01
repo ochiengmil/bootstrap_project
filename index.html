@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="MyApp">
 <head>
 	<title>Gomila and Others Dev Agency</title>
 	<meta charset="utf-8"/>
@@ -8,6 +8,12 @@
 	<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css"/>
 	<link rel="stylesheet"  href="main.css"/>
 	<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/jquery-ui.min.css"/>
+
+	<script src="bootstrap-3.3.5-dist/js/angular.min.js"></script>
+	<script src="bootstrap-3.3.5-dist/js/controllers.js"></script>
+
+
+
 
 </head>
 
@@ -33,7 +39,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Our Projects <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="#Projects">Our Projects <span class="sr-only">(current)</span></a></li>
         <li><a href="#profile">FOUNDER</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
@@ -45,6 +51,7 @@
             <li><a href="#">Host IT</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Make IT Graphics</a></li>
+            <li><a href="#">CopywrIghT</a></li>
           </ul>
         </li>
       </ul>
@@ -75,7 +82,7 @@
 
 <div class="container-fluid">
 	<section class="row text-center jumbotron" id="slogan">
-	<h1>We Build the Future, and It's Awesome!!</h1>	
+	<h1>This is What We Do, This is Our Passion!!</h1>	
     <button type="button" class="btn btn-warning">Go to Founder's Profile</button>
 	</section>
 
@@ -91,26 +98,26 @@
 
 		</div>
 	
-		<h1 class="text-center">Projects </h1>
+		<h1 class="text-center" id="Projects">Projects </h1>
 		
 
 		<div class="row">
 
 		
 				<div class="col-sm-4">
-					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO82UWduZMZYazJ7STqQpozVMS___E2YA680Vb7agAeYlpEwzH8Q"/>
+					<a href="http://www.coca-colacompany.com/brands/the-coca-cola-company/"><img src="bootstrap-exercise/../Images/coke2.jpg"/></a>
 					<h4>Coca-cola Product Promotion Site</h4>
 				</div>
 
 			
 				<div class="col-sm-4">
-					<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRDe1Tc2OzwVmRFZXoK_Ql2OKVXz6u2ToMBevBSSitsp6i6uhJBZg"/>
-					<h4>World Bank Server Configuration </h4>
+					<a href="http://devpost.com/software/mkombozi"><img src="bootstrap-exercise/../Images/mkombozi1.jpg"/></a>
+					<h4>Mkombozi Web App</h4>
 				</div>
 			
 			
 				<div class="col-sm-4">
-					<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRsbWUCdR3jM-Wkp6sT49jm1VpycgeXtArIoHNLMRtQZLC8C5Xl"/>
+					<img src="bootstrap-exercise/../Images/bodaboda2.jpg"/>
 					<h4>'Get a BodaBoda' Mobile App</h4>
 				</div>
 		</div>
@@ -119,17 +126,17 @@
 		<div class="row">
 
 					<div class="col-sm-4">
-						<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRsbWUCdR3jM-Wkp6sT49jm1VpycgeXtArIoHNLMRtQZLC8C5Xl"/>
-						<h4>Debugging and Code 'Readability' at TheDevShop</h4>
+						<img src="bootstrap-exercise/../Images/mobilephone.jpg"/>
+						<h4>Mobile Apps Development at TheDevShop</h4>
 					</div>
 
 					<div class="col-sm-4">
-						<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRsbWUCdR3jM-Wkp6sT49jm1VpycgeXtArIoHNLMRtQZLC8C5Xl"/>
-						<h4>World Youth Association Conference App</h4>
+						<img src="bootstrap-exercise/../Images/wya.png"/>
+						<h4>World Youth Alliance Conference App</h4>
 					</div>
 
 					<div class="col-sm-4">
-						<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRsbWUCdR3jM-Wkp6sT49jm1VpycgeXtArIoHNLMRtQZLC8C5Xl"/>
+						<img src="bootstrap-exercise/../Images/wordpress.png"/>
 						<h4>WordPress Online Community Contributer</h4>
 					</div>
 		</div>
@@ -150,6 +157,85 @@
 		</div>
 
 </section>
+
+	
+
+
+<section class="container" id="projects">
+
+		<div class="page-header">
+		<h1 class="text-center">Open source stuff</h1>
+		</div>
+		
+		<div class="row" id="open-source-container">
+			
+		</div>
+
+</section>
+
+<section class="">
+	<div class="page-header">
+		<h1>Angular Example</h1>
+	</div>
+
+	<div class="col-sm-6" ng-init="age=20;year=2015">
+		<input type="number" ng-model="cash" placeholder="Please Enter your Cash"/>
+
+		<h1 ng-bind="cash"></h1>KES
+
+		<input type="number" ng-model="expenses" placeholder="Please Enter Your Expenses">
+
+		<h1 ng-bind="expenses"></h1>KES
+
+		<!--Angular Expression-->
+		<h2>{{cash-expenses}}</h2>
+		<p> My Age is: {{age}}</p>		
+		<p> The Year is: {{year}}</p>
+	</div>
+
+
+
+
+	<div class="col-sm-6" ng-controller="detailsController">
+
+		<h6>First Name:{{fname}}</h6>
+		<h6>Last Name:{{lname}}</h6>
+		<h6>Course:{{course}}</h6>
+		<h6>School:{{school}}</h6>
+		<h6>Grade:{{grade}}</h6>
+
+	</div>
+
+	<div class="col-sm-6" ng-controller="carsController">
+		<table border ="1">
+			<input type="text" ng-model="test">
+			<tr ng-repeat="x in cars | filter:test">
+				<td>{{x.type}}</td>
+					<td>{{x.model}}</td>
+						<td>{{x.brand}}</td>
+							<td>{{x.year}}</td>
+
+
+			</tr>
+
+
+
+		</table>
+
+
+
+
+
+	</div>
+
+
+
+</section>
+
+
+
+
+
 
 
 
@@ -176,7 +262,7 @@
 					<h3>Objective</h3>
 						<div>
 							<p>To answer to the mantra 'all work and no play makes Jack a dull boy' and say 'that's if Jack 
-							   is doing the wrong job'. We mean: enjoy the trade-Develop the Web, Influence and do Business</p>
+							   is doing the wrong job'. We mean: enjoy the trade-Develop the Web, Impact and do Business</p>
 						</div>
 
 				</div>
@@ -252,12 +338,12 @@
 </section>
 
 <script src="bootstrap-3.3.5-dist/js/jquery.min.js"></script>
-
-<script src="bootstrap-3.3.5-dist/js/jqueryui.js"></script>
-
-<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-
 <script src="bootstrap-3.3.5-dist/js/jqueryuiwork.js"></script>
+<script src="bootstrap-3.3.5-dist/js/jqueryui.js"></script>
+<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="./main.js"></script>
+
+
 
 </body>
 </html>
