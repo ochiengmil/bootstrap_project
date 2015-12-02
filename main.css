@@ -11,6 +11,10 @@ color: #ab47bc
 img 
 {
 width: 80%;
+<<<<<<< HEAD
 height: 150px;
+=======
+height: 180px;
+>>>>>>> d43e72894616fde0cc10720c44511a191e03c591
 border-radius: 25px
 }
