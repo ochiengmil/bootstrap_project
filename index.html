@@ -12,15 +12,9 @@
 	<script src="bootstrap-3.3.5-dist/js/angular.min.js"></script>
 	<script src="bootstrap-3.3.5-dist/js/controllers.js"></script>
 
-
-
-
 </head>
 
 <body>
-
-
-
 
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -91,7 +85,6 @@
 
 
 
-
 <section class="container" id="projects">
 
 		<div class="page header">
@@ -101,24 +94,30 @@
 		<h1 class="text-center" id="Projects">Projects </h1>
 		
 
-		<div class="row">
 
+		<div class="row">
 		
 				<div class="col-sm-4">
-					<a href="http://www.coca-colacompany.com/brands/the-coca-cola-company/"><img src="bootstrap-exercise/../Images/coke2.jpg"/></a>
+					<a href="http://www.coca-colacompany.com/brands/the-coca-cola-company/">
+						<img class="crop" src="bootstrap-exercise/../Images/coke2.jpg"/>
+					</a>
 					<h4>Coca-cola Product Promotion Site</h4>
 				</div>
 
 			
 				<div class="col-sm-4">
-					<a href="http://devpost.com/software/mkombozi"><img src="bootstrap-exercise/../Images/mkombozi1.jpg"/></a>
+					<a href="http://devpost.com/software/mkombozi">
+						<img class="crop" src="bootstrap-exercise/../Images/mkombozi1.jpg"/>
+					</a>
 					<h4>Mkombozi Web App</h4>
 				</div>
 			
 			
 				<div class="col-sm-4">
-					<img src="bootstrap-exercise/../Images/bodaboda2.jpg"/>
-					<h4>'Get a BodaBoda' Mobile App</h4>
+					<a href="http://yubabikes.com/boda-boda/boda-boda-8-speed">
+						<img class="crop" src="bootstrap-exercise/../Images/bodaboda2.jpg"/>
+					</a>
+					<h4>'PataBodaa..' Mobile App</h4>
 				</div>
 		</div>
 
@@ -126,17 +125,17 @@
 		<div class="row">
 
 					<div class="col-sm-4">
-						<img src="bootstrap-exercise/../Images/mobilephone.jpg"/>
+						<img class="crop" src="bootstrap-exercise/../Images/mobilephone.jpg"/>
 						<h4>Mobile Apps Development at TheDevShop</h4>
 					</div>
 
 					<div class="col-sm-4">
-						<img src="bootstrap-exercise/../Images/wya.png"/>
+						<img class="crop" src="bootstrap-exercise/../Images/wya.png"/>
 						<h4>World Youth Alliance Conference App</h4>
 					</div>
 
 					<div class="col-sm-4">
-						<img src="bootstrap-exercise/../Images/wordpress.png"/>
+						<img class="crop" src="bootstrap-exercise/../Images/wordpress.png"/>
 						<h4>WordPress Online Community Contributer</h4>
 					</div>
 		</div>
@@ -144,21 +143,22 @@
 </section>
 
 
+
+	
+
 <section class="container">
 		<div class="row">
 					
-			<div class="col-sm-2">Language</div>
-			<div class="col-sm-2">Language</div>
-			<div class="col-sm-2">Language</div>
-			<div class="col-sm-2">Language</div>
-			<div class="col-sm-2">Language</div>
-			<div class="col-sm-2">Language</div>
-
+			<div class="col-sm-3">Language</div>
+			<div class="col-sm-3">Language</div>
+			<div class="col-sm-3">Language</div>
+			<div class="col-sm-3">Language</div>
+	
 		</div>
 
 </section>
 
-	
+
 
 
 <section class="container" id="projects">
@@ -172,6 +172,11 @@
 		</div>
 
 </section>
+
+
+
+
+
 
 <section class="">
 	<div class="page-header">
@@ -206,41 +211,35 @@
 
 	</div>
 
+	
+
 	<div class="col-sm-6" ng-controller="carsController">
-		<table border ="1">
+		<table border ="1" width = "80%">
 			<input type="text" ng-model="test">
-			<tr ng-repeat="x in cars | filter:test">
-				<td>{{x.type}}</td>
+			<tr ng-repeat="x in cars | filter:test | orderBy:'year'">
+					<td>{{x.type | uppercase}}</td>
 					<td>{{x.model}}</td>
-						<td>{{x.brand}}</td>
-							<td>{{x.year}}</td>
-
-
+					<td>{{x.brand}}</td>
+					<td>{{x.year | number: 2}}</td>
+					
+					<td>
+						<p ng-show= "{{x.year}} <= 2007">This car is too Old</p>
+						<p ng-show= "{{x.year}} > 2007">This car is New</p>
+					</td>
 			</tr>
 
-
+				
 
 		</table>
 
-
-
-
-
 	</div>
-
 
 
 </section>
 
 
+<!-- Company Profile-->
 
-
-
-
-
-
-
-<!-- Sample Profile-->
 <section class="container" id="profile">
 		<div class="row">
 			<div class="page-header text-center">
@@ -280,11 +279,11 @@
 					  </ul>
 				  	
 				  	<div id="tabs-1">
-				    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet </p>
+				    <p>Gomila is currently taking a Web Development course at The Dev School. He has undergone various training sessions at the workplace on Social and Digital Marketing, Sales, Customer service and basic Accounting. Possesses a Diploma in IT from La Contessa College and Excellence in academics and leadership in high school.  </p>
 				  	</div>
 				  	
 				  	<div id="tabs-2">
-				    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. </p>
+				    <p>He has worked with various organisations like CMS AFRICA on social media publicity and front-end development of their CMS SUMMIT conference app. And currently working on the Mkombozi Project as a front-end developer using JavaScript, CSS, Bootstrap, HTML and AngularJS. He has also collaborated with various developers on server-side Web application development</p>
 				  	</div>
 				  	
 				  	<div id="tabs-3">
@@ -294,7 +293,31 @@
 			</div>
 	
 </section>
-	
+
+
+<section class = "row">
+
+	<div id = "list8" class = "col-sm-12" ng-controller = "blogsController">
+
+		<!--Mapping our server response to a list-->
+		<input type="text" ng-model="test"
+		<ul ng-repeat= "x in blogs | filter:test">
+
+			<li>{{x.email}}</li>
+			<li>{{x.body}}</li>
+			<li>{{x.name}}</li>
+		</ul>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
 
 
 <section class="container" id="footer">
@@ -304,29 +327,31 @@
 		<h2 class="text-center">Talk to Us</h2>
 		
 
-		<form class="col-sm-6" id="contact-form" action="/" method="post">
+			<form class="col-sm-6" id="contact-form" action="/" method="post">
 
+				<div class="form-group">
+    				<label for="exampleInputEmail1">Email address</label>
+    				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+				</div>
 		
-		<div class="form-group">
-    		<label for="exampleInputEmail1">Email address</label>
-    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-		</div>
 
-		<div class="form-group">
-    		<label for="InputPassword1">Full name</label>
-    		<input type="text" name="fullname" class="form-control" id="exampleInputFullName1" placeholder="Full Name">
-  		</div>
+				<div class="form-group">
+    				<label for="InputPassword1">Full name</label>
+    				<input type="text" name="fullname" class="form-control" id="exampleInputFullName1" placeholder="Full Name">
+  				</div>
 
-  		<div class"textarea">
-    		<label for="exampleInputComment">Leave a Comment</label>
-    		<textarea type="text" name="leavecomment" class="textarea" id="exampleInputComment" rows="4" placeholder="Comment">
-    		</textarea>
-    	</div>
 
-    	<button type="button" class="btn btn-primary btn-lg active">Submit</button>
+  				<div class"textarea">
+    				<label for="exampleInputComment">Leave a Comment</label>
+    				<textarea type="text" name="leavecomment" class="textarea" id="exampleInputComment" rows="4" placeholder="Comment">
+    				</textarea>
+    			</div>
+    		
+
+    			<button type="button" class="btn btn-primary btn-lg active">Submit</button>
     	
     	
-    	</form>
+    		</form>
 
     	<div class="col-sm-6">
 
@@ -337,18 +362,18 @@
 
 </section>
 
+
+
 <script src="bootstrap-3.3.5-dist/js/jquery.min.js"></script>
-<<<<<<< HEAD
+
 <script src="bootstrap-3.3.5-dist/js/jqueryui.js"></script>
 <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 <script src="bootstrap-3.3.5-dist/js/jqueryuiwork.js"></script>
-=======
+
 <script src="bootstrap-3.3.5-dist/js/jqueryuiwork.js"></script>
 <script src="bootstrap-3.3.5-dist/js/jqueryui.js"></script>
 <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 <script src="./main.js"></script>
-
->>>>>>> d43e72894616fde0cc10720c44511a191e03c591
 
 
 </body>

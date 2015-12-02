@@ -26,3 +26,30 @@ app.controller('carsController', function($scope)
 		];
 	
 	});
+
+//here we consume a webservice/API
+
+app.controller('blogsController', function($scope,$http)
+{
+
+	$http.get('http://jsonplaceholder.typicode.com/posts/1/comments')
+	.success(function(response)
+		{
+			
+			 //get server response
+			$scope.blogs=response;
+		})
+	.error(function(response)
+		{
+
+			console.log(response);
+
+		});
+	});    //end
+
+
+
+
+
+
+

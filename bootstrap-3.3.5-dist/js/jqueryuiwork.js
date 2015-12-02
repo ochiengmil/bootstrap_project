@@ -10,17 +10,6 @@ $(document).ready(function()
 	
 
 
-	// var listTemplate = '';
-	// listTemplate += '<ul>';
-	// listTemplate += '<li>';
-	// listTemplate += '<h1>'<a href="#repo_link">Repository title</a></h1>
-	// listTemplate += '<p>' Description</p>
-	// listTemplate += '<span>'Last updated: <time>12.00pm</time></span>
-	// listTemplate += '</li>'
-<<<<<<< HEAD
-	// listTemplate += '</ul>'
-
-
 	
 
 
@@ -42,12 +31,11 @@ $(document).ready(function()
 			$('#open-source-container').html(listTemplate);
 	  });
 
+});
 
 
 
-
-	//$('#open-source-container').html(listTemplate);
-=======
+	//$('#open-source-container').html(listTemplate)
 	// listTemplate +=	'</ul>'
 
 
@@ -57,8 +45,7 @@ $(document).ready(function()
 
 
 
-$('#open-source-container').html(listTemplate);
->>>>>>> d43e72894616fde0cc10720c44511a191e03c591
+//$('#open-source-container').html(listTemplate);
 
 
-});
+//});

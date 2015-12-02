@@ -8,13 +8,13 @@ padding: 200px;
 color: #ab47bc
 }
 
-img 
+.crop 
 {
 width: 80%;
-<<<<<<< HEAD
+
 height: 150px;
-=======
+
 height: 180px;
->>>>>>> d43e72894616fde0cc10720c44511a191e03c591
-border-radius: 25px
+
+border-radius: 25px;
 }
