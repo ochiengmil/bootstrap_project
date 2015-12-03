@@ -22,10 +22,10 @@ app.controller('carsController', function($scope)
 			   {type:"pickup",model:"dmax",brand:"Isuzu",year:2005},
 			    {type:"saloon",model:"c600",brand:"mercedes",year:2011}
 
-		
 		];
 	
 	});
+		
 
 //here we consume a webservice/API
 
@@ -37,7 +37,9 @@ app.controller('blogsController', function($scope,$http)
 		{
 			
 			 //get server response
+
 			$scope.blogs=response;
+			 
 		})
 	.error(function(response)
 		{
