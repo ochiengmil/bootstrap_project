@@ -22,8 +22,8 @@ $(document).ready(function()
 		data.forEach(function(repository){
 			listTemplate += '<li>';
 			listTemplate += '<h1><a href="'+repository.html_url+'">'+repository.name+'</a></h1>';
-			listTemplate += '<p>Description</p>';
-			listTemplate +='<span>Last updated: <time>12:00pm</time></span>';
+			listTemplate += '<p>'+repository.description+'</p>';
+			listTemplate +='<span>'+repository.updated_at+'</time></span>';
 			listTemplate += '</li>';
 		});
 
