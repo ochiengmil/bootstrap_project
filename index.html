@@ -294,30 +294,51 @@
 	
 </section>
 
+<div class="form2">
+	<form action="/login" method="GET">
+		<!--Username, password, button, dob, gender, -->
+		<label for="">Username</label>
+		<input required type="text" name="username" placeholder="Username">
+		
+		<br>
+		
+		<label for="">Password</label>
+		<input required type="password" name="password" placeholder="Password">
 
-<form action="/login" method="POST">
-	<!--Username, password, button-->
-	<label for="">Username</label>
-	<input type="text" name="username" placeholder="Username">
-	
-	<br>
-	
-	<label for="">Password</label>
-	<input type="password" name="password" placeholder="Password">
+		<br>
 
-	<br>
-
-	<label for="">Email</label>
-	<input type="email" name="email" placeholder="Email">
-
-	<br>
-
-	<input type="submit" value="Login">
+		<label for="">Email</label>
+		<input required type="email" name="email" placeholder="Email">
 
 
+		<label for="">Country</label>
+		<select name="country">
+			<option value="kenya">Kenya</option>
+			<option value="cape-verde">Cape Verde</option>
+			<option value="mauritania">Mauritania</option>
+			<label for="">Bio</label>
+			<br>
+			<textarea name="bio" placeholder="Tell us about yourself" cols="30" rows="5"></textarea>
+		</select>
+
+		<br>
+		<input required type="checkbox" name="terms-agree" value="yes"><span>I have read and agreed to the terms and conditions.</span>
+
+		<br>
+		<input type="radio" name="gender" value="female"><label for="">Female</label>
+
+		<input type="radio" name="gender" value="male"><label for="">Male</label>
+
+		<input type="radio" name="gender" value="other"><label for="">Other</label>
 
 
-</form>
+		<input required type="submit" value="Sign up">
+
+
+	</form>
+</div>
+
+
 
 
 
